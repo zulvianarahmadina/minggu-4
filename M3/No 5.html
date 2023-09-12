@@ -1,0 +1,35 @@
+<html>
+<head> 
+    <title>Latihan 5</title> 
+</head>
+
+<body>
+
+    <h1>Bilangan Fibbonaci</h1>
+    <p>Masukkan bilangan suku ke-n untuk mencari bilangan fibbonaci dari satu sampai angka tersebut  : </p>
+
+ <input type text="text" id="bil" />
+ <input type="button" id="tombol" value="Cari" onclick="fibonacci(bil.value)" />
+
+<p id="output"></p>
+
+<script>
+var fibonacci = function (n) 
+{
+  if (n==1) {
+    var loop = [0, 1];
+    return loop;
+  } 
+
+  else {
+    var s = fibonacci(n - 1);
+    s.push(s[s.length - 1] + s[s.length - 2]);
+    document.getElementById("output").innerHTML =s;
+    return s;
+  }
+   
+};
+</script>
+
+</body>
+</html>

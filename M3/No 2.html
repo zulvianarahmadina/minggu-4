@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>NO 2</title>
+	<meta charset=”utf-8″>	
+</head>
+<body>
+
+    <h1>Validasi Input</h1>
+    <p>Masukkan nama, password, dan alamat email yang anda miliki : </p>
+
+    Nama     : <input type="text" id="nama" style="margin-left: 34px; margin-bottom: 10px;"> <br>
+    Password : <input type="password" id="password" style="margin-left: 10px; margin-bottom: 10px"> <br>
+    E-mail: <input type="email" id="email" style="margin-left: 32px; margin-bottom: 10px"> <br>
+
+    <button onclick="tombol()">Validasi</button>
+
+    <script>
+        function tombol(){
+            var pw, pw_valid, txt;
+            var pw_valid = "sss";
+            pw = document.getElementById("password").value;
+
+            if (pw === pw_valid) {
+                txt = "Password benar!";
+                alert(txt);
+            }
+
+            else{
+                txt = "Password salah!";
+                alert(txt);
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>NO 3</title>
+	<meta charset=”utf-8″>	
+</head>
+
+<body>
+    <h1>Validasi Umur</h1>
+    <p>Masukkan nama dan umur untuk mengetahui status usia anda : </p>
+
+    Nama : <input type="text" id="nama" style="margin-left: 10px; margin-bottom: 10px;"> <br>
+    Umur : <input type="text" id="umur" style="margin-left: 10px; margin-bottom: 10px"> <br>
+
+    <button onclick="tombol()">validasi</button>
+
+    <script>
+        function tombol(){
+            var nama, umur;
+            nama = document.getElementById("nama").value;
+            umur = document.getElementById("umur").value;
+
+            if (nama == ""  && umur == "")  {
+                txt = "isikan nama dan umur!!";
+                alert(txt);
+            }
+
+            else if (nama == "" )  {
+                txt = "isikan nama !!";
+                alert(txt);
+            }
+
+            else if (umur == ""){
+                txt = "isikan umur!!\n ";
+                alert(txt);
+            }
+
+            else if(umur == 0 || umur <0){
+                txt = "Anda Game over!";
+                alert(txt);
+            }
+            
+            else if(umur > 0 && umur < 5){
+                txt = "’Anda masih bayi’";
+                alert(txt);
+            }
+
+            else if(umur <= 15){
+                txt = "’Anda masih anak-anak’";
+                alert(txt);
+            }
+
+            else if(umur <= 30){
+                txt = "’Anda masih remaja’";
+                alert(txt);
+            }
+
+            else if(umur <=60){
+                txt = "’Anda sudah dewasa’";
+                alert(txt);
+            }
+
+            else{
+                txt = "’Anda sudah lansia’";
+                alert(txt);
+            }
+
+        }
+    </script>
+</body>
+</html>

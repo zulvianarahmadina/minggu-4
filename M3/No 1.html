@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>NO 1</title>
+	<meta charset=”utf-8″>
+	
+</head>
+<body>
+        <h2>Hitung Faktorial dengan Input</h2>
+        <p>Masukkan bilangan sembarang yang ingin dihitung faktorialnya :</p>
+
+        <div id="input" style="float: left;">
+          <input type="text" id="bilangan">
+        </div>
+
+        <div id="click" style="float:left; margin-left: 10px;">
+            <button  onclick="faktor()"> hitung </button>
+        </div>
+        <br>
+
+        <p id="hasil"></p>
+
+        <script>
+            function faktor(){
+                var i, bil, faktor;
+                faktor = 1;
+                bil = document.getElementById("bilangan").value;
+
+                for(i = 1; i <= bil; i++) {
+                    faktor = faktor * i;
+                }
+
+                document.getElementById("hasil").innerHTML = "Angka faktorial dari " + bil + " adalah : " + faktor ;
+            }
+
+        </script>
+
+</body>
+</html>
